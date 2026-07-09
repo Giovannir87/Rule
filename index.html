@@ -20,10 +20,30 @@
         justify-content:center;
         align-items:center;
         height:100vh;
+        position:relative;
+        overflow:hidden;
+    }
+
+    /* Immagine di sfondo */
+    body::before{
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-image:url("MusaLogo.jpeg");
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:contain;
+        opacity:0.15; /* trasparenza: aumenta o diminuisci */
+        z-index:0;
     }
 
     .container{
         text-align:center;
+        position:relative;
+        z-index:1;
     }
 
     h1{
